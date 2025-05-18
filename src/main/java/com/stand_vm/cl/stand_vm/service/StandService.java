@@ -19,7 +19,7 @@ public class StandService {
     }
 
     public Stand findById(Long id) {
-        return standRepository.findById(id).orElse(null);
+        return standRepository.findById(id).get();
     }
 
     public Stand save(Stand stand) {
